@@ -11,5 +11,5 @@ services:
     container_name: bugzilla-dev
     image: bugzilla/bugzilla-dev
     ports:
-      - "80:80"
+      - "8081:80"
       - "5900:5900"
