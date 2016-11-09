@@ -2,6 +2,7 @@ Docker Bugzilla
 ===============
 
 Configure a running Bugzilla system using Docker
+**Note: the only difference between this project and the original is the port-forwarding scheme used in docker-compose.yml**
 
 ## Features
 
@@ -23,14 +24,14 @@ To build a fresh image, just change to the directory containing the checked out
 files and run the below command:
 
 ```bash
-$ docker-compose build
+$ docker build --no-cache -t bugzilla/bugzilla-dev .
 ```
 ## How to start Bugzilla Docker image
 
 To start a new container (or rerun your last container) you simply do:
 
 ```bash
-$ docker-compose up
+$ docker-compose up -d
 ```
 
 This will stay in the foreground and you will see the output from `supervisord`. You
@@ -47,7 +48,7 @@ $ docker-compose rm
 ## How to access the Bugzilla container
 
 If you are using Linux, you can simply point your browser to
-`http://localhost/bugzilla` to see the the Bugzilla home page.
+`http://localhost:8081/bugzilla` to see the the Bugzilla home page.
 
 The Administrator login is `admin` and the password is `password`.
 You can use the Administrator account to creat other users, add products or
