@@ -2,7 +2,8 @@ Docker Bugzilla
 ===============
 
 Configure a running Bugzilla system using Docker
-**Note: the only difference between this project and the original is the port-forwarding scheme used in docker-compose.yml**
+
+**Note: the only differences between this project and the original are the port-forwarding scheme used in docker-compose.yml and the timeout allowance to start up MySQL before configuring it.**
 
 ## Features
 
